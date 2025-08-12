@@ -311,6 +311,134 @@ body{
     .menu-container{
         display: none;
     }
+        .navbar-container {
+        padding: 0 10px;
+        flex-wrap: wrap; /* ছোট স্ক্রিনে ফ্লেক্স আইটেমগুলো নতুন লাইনে আনার জন্য */
+    }
+
+    .menu-container {
+        display: none; /* মোবাইলে নেভিগেশন মেনু হাইড করা হয়েছে */
+    }
+
+    .profile-container {
+        flex: 1;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .logo-container {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
+        display: none; /* মোবাইলে সাইডবার হাইড করা হয়েছে */
+    }
+
+    .content-container {
+        margin-left: 0; /* সাইডবার হাইড হওয়ায় বাম দিক থেকে মার্জিন সরানো হয়েছে */
+    }
+
+    .featured-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .featured-desc {
+        width: 100%; /* বিবরণটি পুরো প্রস্থ জুড়ে দেখানোর জন্য */
+    }
+
+    .movie-list-container {
+        padding: 0;
+    }
+
+    .movie-list-wrapper {
+        overflow-x: scroll; /* মুভি লিস্ট হরাইজন্টালি স্ক্রল করার জন্য */
+        -ms-overflow-style: none; /* IE, Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    /* স্ক্রলবারের জন্য ক্রোম/সাফারি */
+    .movie-list-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .movie-list {
+        height: auto;
+    }
+
+    .movie-list-item {
+        margin-right: 15px;
+    }
+
+    .movie-list-item-img {
+        width: 200px; /* ছোট স্ক্রিনের জন্য ইমেজের প্রস্থ কমানো হয়েছে */
+        height: 120px;
+    }
+
+    .movie-list-item-title,
+    .movie-list-item-desc,
+    .movie-list-item-button {
+        display: none; /* ছোট স্ক্রিনে এই তথ্যগুলো হাইড করা হয়েছে */
+    }
+    .arrow {
+        display: none; /* মোবাইলে অ্যারো হাইড করা হয়েছে */
+    }
+    /* ছোট স্ক্রিনে হোভার এফেক্ট বন্ধ করা হলো */
+    .movie-list-item:hover .movie-list-item-img{
+        transform: scale(1);
+        margin: 0;
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------ */
+/* ট্যাবলেট স্ক্রিনের জন্য `@media` কোড */
+/* ------------------------------------------------ */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .navbar-container {
+        padding: 0 30px;
+    }
+
+    .content-container {
+        margin-left: 50px;
+    }
+
+    .featured-content {
+        padding: 30px;
+    }
+    
+    .featured-desc {
+        width: 80%;
+    }
+
+    .movie-list-item-img {
+        width: 280px;
+        height: 160px;
+    }
+
+    .movie-list-item-title{
+        font-size: 24px;
+        left: 30px;
+    }
+
+    .movie-list-item-desc{
+        left: 30px;
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .movie-list-item-button{
+        left: 30px;
+    }
+    
+    .arrow {
+        font-size: 60px; /* ট্যাবলেটের জন্য অ্যারোর সাইজ কিছুটা কমানো হয়েছে */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
 
 }
 
